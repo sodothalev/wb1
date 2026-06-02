@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mequbal - a bilingual web edition.">
+    <title>Mequbal</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#reader">Skip to text</a>
+
+    <header class="site-header" id="top">
+      <button class="icon-button nav-toggle" type="button" aria-expanded="false" aria-controls="chapterNav">
+        <span aria-hidden="true"></span>
+        <span class="visually-hidden">Toggle chapter navigation</span>
+      </button>
+
+      <div class="brand">
+        <img class="brand-logo" src="icon.png" alt="Mequbal">
+      </div>
+
+      <div class="reader-controls" aria-label="Reader controls">
+        <div class="text-controls" aria-label="Text size controls">
+          <button class="control-button text-decrease" type="button" aria-label="Decrease text size">A−</button>
+          <button class="control-button text-increase" type="button" aria-label="Increase text size">A+</button>
+        </div>
+
+        <div class="language-switcher" aria-label="Language">
+          <button class="control-button lang-button" type="button" data-lang="en" aria-label="Read in English">
+            <span aria-hidden="true">🇬🇧</span>
+          </button>
+          <button class="control-button lang-button" type="button" data-lang="es" aria-label="Leer en español">
+            <span aria-hidden="true">🇪🇸</span>
+          </button>
+        </div>
+
+        <button class="control-button theme-toggle" type="button" aria-label="Switch to dark theme">
+          <span class="theme-toggle__icon" aria-hidden="true">◐</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="chapter-nav" id="chapterNav" aria-label="Chapter navigation">
+        <div class="chapter-nav__inner">
+          <p class="nav-label" data-i18n="contentsLabel">Contents</p>
+          <nav id="bookNav"></nav>
+        </div>
+      </aside>
+
+      <main class="reader" id="reader" tabindex="-1">
+        <div class="reading-progress" aria-hidden="true">
+          <span id="readingProgress"></span>
+        </div>
+
+        <section id="chapters" class="chapters" aria-label="Book chapters"></section>
+      </main>
+    </div>
+
+    <button class="back-to-top" type="button" aria-label="Back to top">↑</button>
+
+    <script src="content.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
