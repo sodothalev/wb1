@@ -467,6 +467,25 @@ h3 {
   transform: translateY(0);
 }
 
+.site-footer {
+  min-height: var(--header-height);
+  display: grid;
+  place-content: center;
+  gap: 0.1rem;
+  padding: 0.7rem 1.2rem;
+  border-top: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 92%, var(--surface));
+  color: var(--accent-strong);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: clamp(1rem, 2.8vw, 1.25rem);
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+}
+
 @media (max-width: 860px) {
   :root {
     --header-height: 66px;
